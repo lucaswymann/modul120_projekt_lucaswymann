@@ -1,0 +1,78 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:$safeprojectname$"
+        xmlns:extensions="clr-namespace:$safeprojectname$.Extensions"
+        xmlns:UserControls="clr-namespace:$safeprojectname$.UserControls" x:Class="$safeprojectname$.MainWindow"
+        mc:Ignorable="d"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}"
+        Title="MainWindow" Height="350" Width="525" KeyDown="Window_KeyDown">
+    <Grid VerticalAlignment="Stretch" Background="Beige" HorizontalAlignment="Stretch">
+        <Grid.Resources>
+            <Style TargetType="{x:Type Button}">
+                <Setter Property="Background" Value="Green"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="1">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Background" Value="Red"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Name="ColNavigation" Width="200"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Background="LightBlue" HorizontalAlignment="Stretch"  Grid.Row="1" VerticalAlignment="Stretch" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Button Grid.Row="0" Content="Your Plans" Style="{StaticResource LinkButtonStyle}" Margin="0,0,0,29" Grid.RowSpan="2" MouseDown="Button_MouseDown" Click="Button_Click" />
+            <Button Grid.Row="1" Content="Options" Style="{StaticResource LinkButtonStyle}" Margin="0,1,0,28" Grid.RowSpan="2" />
+            <Button Grid.Row="2" Content="Exit" Style="{StaticResource LinkButtonStyle}" Margin="0,1,0,28" Grid.RowSpan="2" Click="Button_Click_1" />
+            <Path Data="M200,0 L200,289" Fill="#FFF4F4F5" HorizontalAlignment="Right"  Grid.RowSpan="8" Stretch="Fill" Stroke="Black" VerticalAlignment="Stretch" Width="1" />
+
+        </Grid>
+        <TextBlock Grid.Column="0" Grid.Row="0" Background="LightBlue" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="DarkBlue" FontStyle="Italic" Text="Test-Planner" FontSize="22" FontFamily="Segoe Print" Margin="22.918,0.493" Height="29.014" Width="154.164"/>
+        <TextBlock Grid.Column="1" Text="Your Account" Background="Beige" VerticalAlignment="Center" Foreground="LightBlue" TextAlignment="Center" FontFamily="Segoe Print" Grid.ColumnSpan="2" Margin="0,7.087" Height="15.826" FontStyle="Italic" FontWeight="Bold"/>
+        <Path Grid.ColumnSpan="3" Data="M0,30 L517,30" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="1" Margin="0,0,-1,0" Grid.Row="1" Stretch="Fill" Stroke="Black" VerticalAlignment="Top"/>
+        <Border MouseUp="UIElement_OnMouseUp" Style="{StaticResource MaximizeStyle}" BorderBrush="Black" BorderThickness="1" Grid.RowSpan="1" Grid.Column="1" HorizontalAlignment="Stretch" Grid.Row="1" VerticalAlignment="Stretch">
+            <TextBlock Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Text="&gt;"  Margin="0,131.52" FontSize="10" FontWeight="Bold" TextAlignment="Center" FontFamily="Footlight MT Light"/>
+        </Border>
+        <Path Height="1" Grid.Row="2" Grid.ColumnSpan="3" Fill="LightGray" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
+        
+        <Grid Grid.Column="2" HorizontalAlignment="Left" Height="107" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="297">
+            <TextBlock HorizontalAlignment="Left"  TextWrapping="Wrap" Text="Username" VerticalAlignment="Center" FontFamily="Segoe Print" FontWeight="Bold" FontStyle="Italic"/>
+            <TextBlock HorizontalAlignment="Left"  TextWrapping="Wrap" Text="Password" VerticalAlignment="Bottom" FontFamily="Segoe Print" FontWeight="Bold" FontStyle="Italic"/>
+            <TextBox HorizontalAlignment="Center" Height="22"  TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120"/>
+            <TextBox HorizontalAlignment="Center" Height="22"  TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Bottom" Width="120"/>
+
+        </Grid>
+        <Button Content="Register" Background="LightBlue" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Bottom" Width="75" FontWeight="Bold" FontFamily="Segoe Print"/>
+        <TextBlock Grid.Column="2" HorizontalAlignment="Center"  Grid.Row="1" TextWrapping="Wrap" Text="or didnt register yet?" VerticalAlignment="Center" FontFamily="Segoe Print" FontWeight="Bold"/>
+
+    </Grid>
+</Window>
