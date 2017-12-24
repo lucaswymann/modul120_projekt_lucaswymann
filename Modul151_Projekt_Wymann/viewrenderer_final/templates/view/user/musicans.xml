@@ -1,0 +1,34 @@
+<CATALOG>
+    <Musican>
+        <TITLE>Pianodrama</TITLE>
+        <ARTIST>Synergetic Emotion</ARTIST>
+        <COUNTRY>Mexico</COUNTRY>
+        <COMPANY>Columbia</COMPANY>
+        <LINK>https://soundcloud.com/synergeticemotion/synergetic-emotion-cosmic-energy-pianodrama-out-now</LINK>
+        <YEAR>1985</YEAR>
+    </Musican>
+    <Musican>
+        <TITLE>Activation</TITLE>
+        <ARTIST>Aura Vortex</ARTIST>
+        <COUNTRY>USA</COUNTRY>
+        <COMPANY>CBS Records</COMPANY>
+        <PRICE>9.90</PRICE>
+        <YEAR>1988</YEAR>
+    </Musican>
+    <Musican>
+        <TITLE>Full of Joy</TITLE>
+        <ARTIST>Krama</ARTIST>
+        <COUNTRY>USA</COUNTRY>
+        <COMPANY>RCA</COMPANY>
+        <PRICE>9.90</PRICE>
+        <YEAR>1982</YEAR>
+    </Musican>
+    <Musican>
+        <TITLE>all the things that we wished</TITLE>
+        <ARTIST>Mandragora</ARTIST>
+        <COUNTRY>UK</COUNTRY>
+        <COMPANY>Virgin records</COMPANY>
+        <PRICE>10.20</PRICE>
+        <YEAR>1990</YEAR>
+    </Musican>
+</CATALOG>
